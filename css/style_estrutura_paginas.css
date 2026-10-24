@@ -1,0 +1,385 @@
+
+/*IMPORTANDO A FONTE DO GOOGLE FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+/*ATRIBUINDO EM TODOS OS ELEMENTOS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto, Arial, sans-serif;
+}
+
+/*CRIANDO VARIÁVEIS*/
+:root{
+    --cor_principal: #C92F68;
+    --cor_botao01: #F8B4C8;
+    --cor_lnk_menu: #5C1832;
+    --cor_vermelha: #b60000;
+    --cor_suave: #FFF5F8;
+    --cor_branca: #ffffff;
+}
+
+/*CONFIGURANDO A TAG main*/
+#geral{
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor_branca);
+}
+
+/*CONFIGURANDO O CABEÇALHO DA PÁGINA*/
+#cabecalho{
+    width: 100%;
+    min-height: 90px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: var(--cor_branca);
+    border-bottom: 1px solid var(--cor_botao01);
+}
+
+/*ALTERANDO O TAMANHO DA IMAGEM DO LOGO*/
+#logo img{
+    width: 130px;
+    height: auto;
+}
+
+/*CONFIGURANDO O MENU PRINCIPAL*/
+#menu{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*CONFIGURANDO OS LI DO UL DO CABEÇALHO*/
+#cabecalho ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+/*CONFIGURANDO OS TAMANHOS DOS ÍCONES*/
+#div-icones{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#div-icones img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/*FORMATANDO OS MENUS*/
+#menu a:link,
+#menu a:visited{
+    font-size: 0.95em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
+}
+
+#menu a:hover{
+    color: var(--cor_principal);
+}
+
+#menu a:active{
+    color: var(--cor_vermelha);
+}
+
+/*CONFIGURANDO O MENU DE SEÇÕES*/
+#nav-secoes{
+    width: 100%;
+    min-height: 55px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor_suave);
+    border-bottom: 1px solid var(--cor_botao01);
+}
+
+/*CONFIGURANDO AS CATEGORIAS*/
+#menu-secoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+.lnk-secao:link,
+.lnk-secao:visited{
+    font-size: 0.9em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--cor_lnk_menu);
+}
+
+.lnk-secao:hover{
+    color: var(--cor_principal);
+}
+
+.lnk-secao:active{
+    color: var(--cor_vermelha);
+}
+
+/*CONFIGURANDO A PESQUISA*/
+#pesquisa{
+    width: 100%;
+    min-height: 110px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor_suave);
+}
+
+#pesquisa input{
+    width: 80%;
+    max-width: 500px;
+    height: 45px;
+    padding: 12px 20px;
+    border: 1px solid var(--cor_botao01);
+    border-radius: 25px;
+    outline: none;
+    background-color: var(--cor_branca);
+    font-size: 1em;
+}
+
+#pesquisa input:focus{
+    border-color: var(--cor_principal);
+}
+
+#pesquisa input::placeholder{
+    color: var(--cor_lnk_menu);
+}
+
+/*FORMATAÇÃO DOS CARDS*/
+#cards{
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px 0px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    width: 100%;
+    min-height: 300px;
+    padding: 15px;
+    border: 2px solid var(--cor_botao01);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: var(--cor_branca);
+    box-shadow: 0px 3px 8px rgba(92, 24, 50, 0.10);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    border-color: var(--cor_principal);
+    box-shadow: 0px 5px 12px rgba(92, 24, 50, 0.15);
+}
+
+/*CONFIGURANDO AS IMAGENS DOS CARDS*/
+.card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*CONFIGURANDO OS TÍTULOS DOS CARDS*/
+.card h2{
+    margin: 10px 0px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cor_lnk_menu);
+}
+
+/*CONFIGURANDO OS PREÇOS DOS CARDS*/
+.card h3{
+    margin: 10px 0px;
+    font-size: 1.1em;
+    color: var(--cor_principal);
+}
+
+/*CONFIGURANDO OS BOTÕES DOS CARDS*/
+.card button{
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--cor_principal);
+    color: var(--cor_branca);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover{
+    background-color: var(--cor_lnk_menu);
+}
+
+/*FORMATAÇÃO DO RODAPÉ*/
+#rodape{
+    width: 100%;
+    min-height: 150px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: var(--cor_suave);
+    color: var(--cor_lnk_menu);
+}
+
+#dadosloja{
+    font-size: 0.9em;
+    line-height: 1.8;
+}
+
+#icones-sociais ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+#icones-sociais img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+#div-cartoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#div-cartoes img{
+    width: 35px;
+    height: auto;
+    object-fit: contain;
+}
+
+/*CONFIGURANDO TELAS MENORES*/
+@media screen and (max-width: 768px){
+
+    #geral{
+        padding: 10px;
+    }
+
+    #cabecalho{
+        justify-content: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    #logo img{
+        width: 120px;
+    }
+
+    #menu{
+        flex-basis: 100%;
+    }
+
+    #cabecalho ul{
+        gap: 15px;
+    }
+
+    #div-icones{
+        justify-content: center;
+    }
+
+    #menu-secoes{
+        gap: 15px;
+    }
+
+    #pesquisa input{
+        width: 95%;
+    }
+
+    #cards{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+    }
+
+    #rodape{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    #menu ul{
+        gap: 12px;
+    }
+
+    #menu a:link,
+    #menu a:visited{
+        font-size: 0.85em;
+    }
+
+    #menu-secoes{
+        gap: 10px;
+    }
+
+    .lnk-secao:link,
+    .lnk-secao:visited{
+        font-size: 0.75em;
+    }
+
+    #pesquisa{
+        min-height: 85px;
+    }
+
+    #cards{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .card{
+        padding: 10px;
+    }
+
+    .card img{
+        height: 120px;
+    }
+
+    .card h2{
+        font-size: 0.85em;
+    }
+
+    .card button{
+        font-size: 0.75em;
+    }
+}
